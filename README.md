@@ -17,6 +17,7 @@ Each new task lives in its own folder such as `stage0`, `stage1`, and so on. Thi
 ## Current Stages
 
 - `stage0`: API Integration & Data Processing Assessment
+- `stage1`: Data Persistence & API Design Assessment
 
 ## Stage 0
 
@@ -33,6 +34,17 @@ Live deployment:
 Example request:
 
 `https://hng-stage0-api-228n.onrender.com/api/classify?name=Michael`
+
+## Stage 1
+
+The Stage 1 solution lives in [`stage1`](./stage1) and exposes:
+
+- `POST /api/profiles`
+- `GET /api/profiles`
+- `GET /api/profiles/{id}`
+- `DELETE /api/profiles/{id}`
+
+It integrates with Genderize, Agify, and Nationalize, stores profiles in SQLite, prevents duplicate records by normalized name, and supports case-insensitive filtering.
 
 ## Local Development
 

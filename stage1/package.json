@@ -1,0 +1,23 @@
+{
+  "name": "hng-stage1-profiles",
+  "version": "1.0.0",
+  "description": "Stage 1 backend task: persistent profile API with multi-API integration.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/app.test.js"
+  },
+  "keywords": [
+    "hng",
+    "backend",
+    "sqlite",
+    "profiles"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.9.0"
+  }
+}
