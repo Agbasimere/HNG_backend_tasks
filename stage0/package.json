@@ -1,0 +1,20 @@
+{
+  "name": "hng-stage0-classifier",
+  "version": "1.0.0",
+  "description": "Stage 0 backend task: classify a name using Genderize and return processed data.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/app.test.js"
+  },
+  "keywords": [
+    "hng",
+    "backend",
+    "genderize",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT"
+}
