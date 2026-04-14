@@ -1,13 +1,18 @@
 # HNG Backend Tasks
 
-This repository contains my HNG backend stage tasks, organized by stage folders.
+This repository contains my HNG backend stage tasks, with each task isolated in its own stage folder at the repository root.
 
 ## Structure
 
 ```text
 HNG_backendtasks/
   stage0/
+  stage1/
+  stage2/
+  ...
 ```
+
+Each new task lives in its own folder such as `stage0`, `stage1`, and so on. This keeps implementation, documentation, and deployment settings separate per stage.
 
 ## Current Stages
 
@@ -20,6 +25,14 @@ The Stage 0 solution lives in [`stage0`](./stage0) and exposes:
 `GET /api/classify?name=<value>`
 
 It integrates with the Genderize API, processes the upstream data, and returns the assessment-required response format.
+
+Live deployment:
+
+`https://hng-stage0-api-228n.onrender.com`
+
+Example request:
+
+`https://hng-stage0-api-228n.onrender.com/api/classify?name=Michael`
 
 ## Local Development
 
@@ -39,4 +52,4 @@ npm test
 
 ## Deployment
 
-For deployment platforms like Render, use the `stage0` folder as the service root directory.
+For deployment platforms like Render, keep the GitHub repository root as `HNG_backendtasks` and set the service Root Directory to the relevant stage folder, for example `stage0`.

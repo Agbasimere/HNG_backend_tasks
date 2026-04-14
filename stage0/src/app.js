@@ -32,12 +32,12 @@ export function validateNameQuery(searchParams) {
     };
   }
 
-  // Duplicate query keys become an array-like input, which we reject as non-string.
+  // Query strings are text-only, so repeated keys are the closest practical "non-string" case.
   if (names.length > 1) {
     return {
       ok: false,
       statusCode: 422,
-      message: "The name query parameter must be a single string value"
+      message: "The name query parameter must be a string"
     };
   }
 

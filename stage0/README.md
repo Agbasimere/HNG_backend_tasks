@@ -4,6 +4,10 @@ This project implements the HNG Stage 0 backend assessment with a single GET end
 
 `GET /api/classify?name=<value>`
 
+Live deployment:
+
+`https://hng-stage0-api-228n.onrender.com`
+
 It calls the Genderize API, processes the result, and returns a normalized response with:
 
 - `gender`
@@ -62,6 +66,12 @@ You can override the port with the `PORT` environment variable.
 GET /api/classify?name=Michael
 ```
 
+Live example:
+
+```text
+https://hng-stage0-api-228n.onrender.com/api/classify?name=Michael
+```
+
 ### Success Response
 
 ```json
@@ -95,7 +105,7 @@ All errors use this structure:
 - Empty `name` returns `400 Bad Request`
 - Repeated `name` values such as `?name=John&name=Jane` return `422 Unprocessable Entity`
 
-Note: query strings arrive as text in HTTP. To support the task's non-string validation rule in a meaningful way, repeated `name` keys are treated as array-like input and rejected with `422`.
+Note: query strings arrive as text in HTTP. To handle the task's non-string rule in a practical way, repeated `name` keys are treated as array-like input and rejected with `422`.
 
 ### Genderize Edge Case
 
@@ -144,3 +154,9 @@ https://your-app-url/api/classify?name=Michael
 - Public GitHub repository
 - Clear README
 - Live public API base URL
+
+For this submission:
+
+- Repository root contains stage folders such as `stage0`, `stage1`, and future stages
+- Stage 0 implementation lives inside the `stage0` directory
+- Public API base URL: `https://hng-stage0-api-228n.onrender.com`
