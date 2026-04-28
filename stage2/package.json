@@ -1,0 +1,25 @@
+{
+  "name": "hng-stage2-query-engine",
+  "version": "1.0.0",
+  "description": "Stage 2 backend task: intelligence query engine with advanced filtering and natural language search.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node test/app.test.js",
+    "seed": "node src/seed.js"
+  },
+  "keywords": [
+    "hng",
+    "backend",
+    "sqlite",
+    "profiles",
+    "search"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^12.9.0"
+  }
+}

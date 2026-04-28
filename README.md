@@ -18,6 +18,7 @@ Each new task lives in its own folder such as `stage0`, `stage1`, and so on. Thi
 
 - `stage0`: API Integration & Data Processing Assessment
 - `stage1`: Data Persistence & API Design Assessment
+- `stage2`: Intelligence Query Engine Assessment
 
 ## Stage 0
 
@@ -45,6 +46,15 @@ The Stage 1 solution lives in [`stage1`](./stage1) and exposes:
 - `DELETE /api/profiles/{id}`
 
 It integrates with Genderize, Agify, and Nationalize, stores profiles in SQLite, prevents duplicate records by normalized name, and supports case-insensitive filtering.
+
+## Stage 2
+
+The Stage 2 solution lives in [`stage2`](./stage2) and adds:
+
+- combined filtering on `GET /api/profiles`
+- sorting and pagination
+- rule-based natural language search on `GET /api/profiles/search`
+- an idempotent seed flow for the provided 2026 dataset
 
 ## Local Development
 
